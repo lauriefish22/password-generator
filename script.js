@@ -1,10 +1,7 @@
 // Assignment code here
-function specialCheck(_string) {
+
 const special = !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-for (var i = 0; i < _string.length; i++) {
- if ??????
-}
-}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -21,17 +18,21 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-if (password.value.length > 8 && password.value < 120 && *Sp.char.*) {
+
+if(!passwordText.value.length < 8 || !password.value.length >128) {
+  msg="password needs to be more than 8 characters and less than 128"
+  alert(msg); 
+
+} else if (passwordText.value.length < 128 && password.value.length >=8) {
   msg="success"
   alert(msg);
-}else if(password.value.length < 8) {
-  msg="password needs to be more than 8 characters."
-  alert(msg); 
-}
- else if (password.value.length > 120) {
-  msg="You can't have more than 128 characters"
+
+} else if (passwordText.value.length < 1 (special)) {
+  msg="You need at at least one special character"
+  alert(msg);
+
+} else (passwordText.value.length >= 8 && password.value.length < 128 && passwordText.value.length > 1(special)) {
+  msg="success"
   alert(msg);
 }
-/*else if (special characters) {
-  alert: you need at least 2 special characters.
-}*/
+
