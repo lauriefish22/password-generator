@@ -22,13 +22,30 @@ function generatePassword() {
     let upperCase = window.confirm("Would you like uppercase letters in your password?");
     let specChar = window.confirm("Would you like to include special characters?");
     let digits = window.confirm("Would you like to include numeric values?");
-    
+    let newPassword = "";
+    let lowerCaseValue = "abcdefghijklmnopqrstuvWxyz";
+    let upperCaseValue = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let digitsValue = "0123456789";
+    const specialCharValue = "#$%&()*+,-.:;<=>?@[]^_{|}~"; 
+    //26
+
+    for (let i = 0; i < charLength; i++) {
+    let char = (Math.floor(math.random) * 25);
   
+    let availableChar = "";
+    if (lowerCase == true) {
+      availableChar += lowerCaseValue;
+    }
+    if (upperCase == true) {
+      availableChar += upperCaseValue;
+    }
+    if (specChar == true) {
+      availableChar += specialCharValue;
+    }
+    if (digits == true) {
+      availableChar += digitsValue;
+    }
   }
-
-
-}
-
 
 
 
