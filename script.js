@@ -10,6 +10,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+//creating character options for the user to use communicated by prompts and confirms//
 function generatePassword() {
   let charLength = window.prompt("Enter in your desired number of characters");
   if (charLength < 8 || charLength > 128) {
@@ -26,6 +27,7 @@ function generatePassword() {
     let specialCharValue = "#$%&()*+,-.:;<=>?@[]^_{|}~"; 
     let availableChar = "";
 
+    //creating an array from the choices the user made//
     if (lowerCase == true) {
       availableChar += lowerCaseValue;
     }
@@ -42,6 +44,7 @@ function generatePassword() {
     let availableCharLength = availableChar.length;
     let availableCharArr = availableChar.split("");
 
+    //looping through the array to choose random characters//
     for (let i = 0; i < charLength; i++) {
       
       let randomChar = Math.floor(Math.random() * availableCharLength);
@@ -49,6 +52,7 @@ function generatePassword() {
       console.log(availableCharArr[randomChar-1]);
       newPassword += availableCharArr[randomChar-1];
     }
+    //either giving them a password or letting them know they need to try again//
     return newPassword;
   }
   return "Password conditions not met";
